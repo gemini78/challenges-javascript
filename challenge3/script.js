@@ -20,6 +20,22 @@ const imc = (user) => {
 };
 
 const calculAndCompareImc = (datas, person1, person2) => {
+  const getCategory = (firstname, imc) => {
+    let category = "";
+    if (imc < 22) {
+      category = "Insuffisance pondérale";
+    } else if (imc > 22 && imc <= 27) {
+      category = "Poids normal";
+    } else if (imc > 27 && imc <= 32) {
+      category = "Surpoids";
+    } else if (imc > 32 && imc <= 42) {
+      category = "Obésité";
+    } else if (imc > 42) {
+      category = "Obésité importante";
+    }
+    console.log(`${firstname}: ${category}`);
+  };
+
   datas.forEach((tuple) => {
     person1.username = tuple[0][0];
     person1.taille = tuple[0][1];
@@ -42,6 +58,9 @@ const calculAndCompareImc = (datas, person1, person2) => {
         `${person2.username} a un IMC (${imcPerson2}) plus élevé que ${person1.username} (${imcPerson1})`
       );
     }
+
+    getCategory(person1.username, imcPerson1);
+    getCategory(person2.username, imcPerson2);
   });
 };
 
