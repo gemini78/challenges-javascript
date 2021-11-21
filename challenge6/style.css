@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap");
+:root {
+  --dark-orange: #ff7f50;
+  --light-grey: #faf8f8;
+  --dark-grey: #ccc;
+  --white-color: #fff;
+  --soft-dark: #5e5e5e;
+  --ligth-exodus: #5e5e5e;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: var(--white-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+nav ul li.active a {
+  background-color: var(--dark-orange);
+}
+
+nav a:hover {
+  transition: all 1s ease-in;
+  letter-spacing: 0.1rem;
+}
+header {
+  background: var(--ligth-exodus);
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  color: var(--soft-dark);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  background: var(--ligth-exodus);
+  display: flex;
+  text-align: center;
+  color: var(--white-color);
+  font-size: 1.5rem;
+}
