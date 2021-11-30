@@ -4,7 +4,8 @@ const notes = [275, 40, 430];
 let percent;
 let pourboire;
 let valeurTotal;
-const calculator = (notes) => {
+
+const tipsCalculator = (notes) => {
   notes.forEach((note) => {
     percent = 50 <= note && note <= 300 ? 0.15 : 0.2;
     pourboire = note * percent;
@@ -15,4 +16,4 @@ const calculator = (notes) => {
   });
 };
 
-calculator(notes);
+tipsCalculator(notes);
