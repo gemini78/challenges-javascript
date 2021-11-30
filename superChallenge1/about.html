@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Super Challenge 1</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <nav>
+          <ul>
+            <li><a href="index.html">Super Challenge1</a></li>
+            <li class="active"><a href="about.html">A propos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper">
+        <h1>💪 SuperChallenge1 : Adopt a cat</h1>
+        <h2>💪 Défi</h2>
+        <p>Nous allons créer un petit site Internet pour l’adoption de chats.</p>
+        <p>
+            Avec la manipulation du dom, nous pouvons créer facilement quelques éléments HTML à partir d’une liste d’éléments sans avoir à les recréer à l’infini.
+        </p>
+        <p>
+            Dans cet exercice, tu verras comment nous pouvons générer facilement des cartes à partir d’un tableau d’objets.
+        </p>
+        <p>
+            Dans le codesandbox qui suit, tu trouveras un fichier JavaScript appelé <span class="inBlack">index.js</span> dans lequel se trouve un tableau avec la liste de chats à adopter :
+        </p>
+        <div class="img">
+            <img src="./images/catListe.png" alt="image cat list">
+        </div>
+        <p>Notre objectif est de créer une carte pour chaque animal.</p>
+        <p>De cette façon, si nous voulons ajouter un nouvel animal à la liste, il nous suffira d’ajouter un nouvel objet dans le tableau.</p>
+        <p>Pour cela, nous avons besoin d’une fonction, car nous ne voulons pas répéter le même code encore et encore. Pour rendre cet exercice plus simple, nous avons déjà créé la fonction pour toi.</p>
+        <div class="img">
+            <img src="./images/imageFunction.png" alt="image function">
+        </div>
+        <p>Chaque carte aura un titre (“title”) et une image (“imageUrl”) différente.</p>
+        <p>Pour créer de nouveaux éléments DOM, nous devons utiliser <span class="inBlack">document.createElement()</span>.</p>
+        <p>Nous avons ajouté quelques exemples sur la façon de procéder.</p>
+        <div class="img">
+            <img src="./images/exemple.png" alt="mage d'exemple">
+        </div>
+        <p>Tu dois créer l’élément, puis ajouter la bonne classe, et enfin, ajouter l’élément à son parent. </p>
+        <p>Regarde l’exemple, et crée les éléments manquants:</p>
+        <ul>
+            <li>cardBody : un div avec la classe <span class="inBlack">card-body</span> ajoutée à <span class="inBlack">card</span>.</li>
+            <li>cardTitle : un h2 avec la classe <span class="inBlack">card-title</span>, ajoute-le <span class="inBlack">title</span> passé en paramètre au contenu du h2 (<span class="inBlack">avec innerHTML</span>) et ajoute l’élément à cardBody.</li>
+        </ul>
+        <p>Une fois que tu as terminé, crée une boucle for, qui boucle sur animalsToAdopt et crée une carte pour chaque élément du tableau.</p>
+        <p class="center">index.js</p>
+        <div class="img">
+            <img src="./images/index-js.png" alt="image's index.js">
+        </div>
+        <div class="img">
+            <img src="./images/index-js-2.png" alt="image's index2.js">
+        </div>
+        <p class="center">html</p>
+        <div class="img">
+            <img src="./images/html.png" alt="html 'image">
+        </div>
+        <p class="center">style.css</p>
+        <div class="img">
+            <img src="./images/style.css.png" alt="style.css'image">
+        </div>
+        <div class="img">
+            <img src="./images/style2.css.png" alt="style.css'image">
+        </div>
+        <h2>🧐 Critères d’acceptation</h2>
+        <ul>
+            <li>La carte contient tous les éléments</li>
+            <li> Il y a une carte pour chaque élément du tableau</li>
+        </ul>
+    </div>
+    </main>
+    <footer>
+      <div class="wrapper">
+        <p>&copy; gemini78 - 2021</p>
+      </div>
+      <script src="script.js"></script>
+    </footer>
+  </body>
+</html>
