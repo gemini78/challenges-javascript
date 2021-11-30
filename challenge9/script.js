@@ -115,32 +115,46 @@ const hiddenMessage = [
   " ",
   "X",
 ];
+
 const hiddenCode =
   "XXXXXXXXXXXXXXXXXXXXXXXXXXXCXXXXXXXOXXXXXDXXXXXXXXXXXXXXXEXXXX XXXXXXXXXXXXXXX:X0XXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX3XXXXXX2XXXXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX6XXXXXXXXXXXXXXX6XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX7XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2XXXXXXXXXX8XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX8XXXXXXXXXXX4XXXXXXXXXXXX6XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXXXXXXXXXXXXXXXX9XXXX9XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2XXX4XXXXXXXXXXX6XXXXXXXXX2XXXXXXXX3XXXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXX";
+
 const ignoreX = (datas) => {
+
   let response = [];
-  for (let index = 0; index < datas.length; index++) {
-    const element = datas[index];
-    if (element != "X") {
-      response.push(element);
+  
+  datas.map((data)=>{
+    if (data != 'X') {
+       response.push(data);
     }
-  }
+  });
+  
   return response.join("");
 };
 
-const decoder = (datas) => {
-  let lengthDatas = datas.length;
+
+const decoder = (messageToDecode) => {
   let array = [];
-  for (let index = 0; index < lengthDatas; index++) {
-    let element = datas[index];
-    if (element == "X") {
+  let number = 0;
+  let character = '';
+
+  for (let index = 0; index < messageToDecode.length; index++) {
+    
+    character = messageToDecode[index];
+
+    if (character == "X") {
       continue;
     }
-    if (parseInt(element) && parseInt(element) % 2 == 0) {
+
+    number = parseInt(character);
+
+    if (number && number % 2 == 0) {
       continue;
     }
-    array.push(element);
+
+    array.push(character);
   }
+
   return array.join(" ");
 };
 
