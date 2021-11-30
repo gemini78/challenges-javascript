@@ -1,4 +1,5 @@
 "use strict";
+
 const matchs = [
   [
     { nameTeam: "Dauphins", scores: [44, 23, 71] },
@@ -14,23 +15,25 @@ const calcAverage = (arrayScores) => {
   const reducer = (previousValue, currentValue) => previousValue + currentValue;
   const sum = arrayScores.reduce(reducer);
   const result = sum / arrayScores.length;
-  return parseFloat(result).toFixed(2);
+  return result.toFixed(2);
 };
 
-const checkWinner = (average1, average2, nameTeam1, nameTeam2) => {
+const checkWinner = (match) => {
+  const team1 = match[0];
+  const team2 = match[1];
+  const average1 = calcAverage(team1.scores);
+  const average2 = calcAverage(team2.scores);
   if (average1 > average2) {
-    console.log(`L’équipe ${nameTeam1} gagne (${average1} vs ${average2})`);
+    console.log(`L’équipe ${team1.nameTeam} gagne (${average1} vs ${average2})`);
   } else if (average2 > average1) {
-    console.log(`L’équipe ${nameTeam2} gagne (${average2} vs ${average1})`);
+    console.log(`L’équipe ${team2.nameTeam} gagne (${average2} vs ${average1})`);
   } else {
     console.log(
-      `${nameTeam1}/${nameTeam2} Egalité (${average2} vs ${average1})`
+      `${team1.nameTeam}/${team2.nameTeam} Egalité (${average1} vs ${average2})`
     );
   }
 };
 
 matchs.forEach((match) => {
-  let average1 = calcAverage(match[0].scores);
-  let average2 = calcAverage(match[1].scores);
-  checkWinner(average1, average2, match[0]["nameTeam"], match[1]["nameTeam"]);
+  checkWinner(match);
 });
