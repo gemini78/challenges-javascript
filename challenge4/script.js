@@ -19,11 +19,12 @@ const moyenne = (arrayScores) => {
   const reducer = (previousValue, currentValue) => previousValue + currentValue;
   const sum = arrayScores.reduce(reducer);
   const result = sum / arrayScores.length;
-  return parseFloat(result).toFixed(2);
+  return result.toFixed(2);
 };
 const compareScores = (matchs) => {
   matchs.forEach((match) => {
     const team1 = match[0];
+    // console.log('team1',team1);
     const team2 = match[1];
     let gagnantRegle2 = "";
     let gagnantRegle3 = "";
