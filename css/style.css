@@ -5,6 +5,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: roboto, sans-serif;
+  background: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 :root {
@@ -15,16 +19,6 @@ body {
   --soft-dark: #5e5e5e;
   --ligth-exodus: #5e5e5e;
   --soft-green: #8FBC8F;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--light-grey);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  font-family: "Poppins", sans-serif;
 }
 
 .wrapper {
@@ -79,9 +73,11 @@ footer {
   color: var(--white-color);
   font-size: 1.5rem;
 }
-h1 {
+
+h1, h2 {
     text-align: center;
 }
+
 .inRed {
   color: var(--dark-orange);
 }
