@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -12,7 +13,7 @@ body {
 }
 
 :root {
-  --dark-orange: #ff7f50;
+  --dark-orange: coral;
   --light-grey: #faf8f8;
   --dark-grey: #ccc;
   --white-color: #fff;
@@ -67,7 +68,7 @@ main {
 }
 
 footer {
-  background: var(--ligth-exodus);
+  background: var(--dark-orange);
   display: flex;
   text-align: center;
   color: var(--white-color);
