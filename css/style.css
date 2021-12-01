@@ -1,21 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: roboto, sans-serif;
+  background: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 :root {
-  --dark-orange: #ff7f50;
+  --dark-orange: coral;
   --light-grey: #faf8f8;
   --dark-grey: #ccc;
   --white-color: #fff;
   --soft-dark: #5e5e5e;
   --ligth-exodus: #5e5e5e;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--light-grey);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  font-family: "Poppins", sans-serif;
+  --soft-green: #8FBC8F;
 }
 
 .wrapper {
@@ -28,6 +32,8 @@ nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav a {
@@ -35,14 +41,13 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
   padding: 15px;
-  display: block;
   text-align: center;
   font-size: 1.8rem;
   font-weight: bolder;
 }
 
 nav ul li.active a {
-  background-color: var(--dark-orange);
+  background-color: var(--soft-green);
 }
 
 nav a:hover {
@@ -52,11 +57,8 @@ nav a:hover {
 header {
   background: var(--ligth-exodus);
   display: flex;
-}
-
-h1 {
-  text-align: center;
-  color: var(--soft-dark);
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 main {
@@ -66,13 +68,77 @@ main {
 }
 
 footer {
-  background: var(--ligth-exodus);
+  background: var(--dark-orange);
   display: flex;
   text-align: center;
   color: var(--white-color);
   font-size: 1.5rem;
 }
 
+h1, h2 {
+    text-align: center;
+}
+
 .inRed {
   color: var(--dark-orange);
+}
+
+.inBlack {
+    background-color: var(--soft-dark);
+    color: var(--white-color);
+}
+
+div img {
+    margin: 0 auto;
+    display: block;
+}
+
+p.center {
+    text-align: center;
+    font-weight: bolder;
+}
+
+header {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  background-color: coral;
+  height: 100px;
+  width: 100%;
+}
+
+.cards {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  border-radius: 10px;
+  width: 200px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card-img {
+  border-radius: 10px 10px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://placekitten.com/200/300");
+  height: 200px;
+  width: 100%;
+}
+.card-body {
+  padding: 10px 20px;
+}
+.card-body h2 {
+  margin: 10px 0px;
+}
+.card-button {
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  background-color: lightblue;
+  width: 100%;
 }
