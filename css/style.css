@@ -76,3 +76,13 @@ footer {
 .inRed {
   color: var(--dark-orange);
 }
+
+img {
+  margin:0 auto;
+  display: block;
+}
+
+.inBlack {
+  background-color: var(--soft-dark);
+  color: var(--white-color);
+}

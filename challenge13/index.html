@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Challenge13</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <nav>
+          <ul>
+            <li><a href="#">Javascript-Challenge 13</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper">
+        <h1>💪 Challenge13 : football app</h1>
+        <p>On va créer une app de paris foot !</p>
+        <p>
+          Supposons que nous récupérons les données d’un service web à propos
+          d’un certain jeu (variable ‘game’ dans le code en dessous). Dans ce
+          challenge, on va travailler avec ces données.
+        </p>
+        <h2>🏁 Exercice 1</h2>
+        <p>Tâches :</p>
+        <ol>
+          <li>
+            Créer un tableau de joueurs pour chaque équipe (variables ‘players1’
+            et ‘players2’).
+          </li>
+          <li>
+            Le premier joueur dans un tableau de joueurs est le gardien et les
+            autres sont des joueurs de terrain. Pour l’équipe 1 (le Bayern de
+            Munich), créer une variable ‘gk’ avec le nom du gardien et un
+            tableau ‘fieldPlayers’ avec le reste des joueurs de l’équipe.
+          </li>
+          <li>
+            Créer un tableau ‘allPlayers’ qui contient les joueurs de chaque
+            équipe (22 joueurs).
+          </li>
+          <li>
+            Pendant le match, le Bayern utilise 3 joueurs remplaçants. Créer un
+            autre tableau ‘players1Final’ contenant tous les joueurs de l’équipe
+            originelle ainsi que ‘Thiago’ ‘Coutinho’ et ‘Perisic’.
+          </li>
+          <li>
+            Basé sur l’objet <span class="inBlack">game.odds</span>, créer une
+            variable pour chaque probabilité (appelés ‘team1’, ‘draw’ et
+            ‘team2’).
+          </li>
+          <li>
+            Écrire une fonction ‘printGoals’ qui prends un nombre arbitraire de
+            joueurs et qui écrit chacun d’eux dans la console , ainsi que le
+            nombre total de buts.
+          </li>
+          <li>
+            L’équipe avec la probabilité la plus basse est celle la plus
+            susceptible de gagner. Écrire dans la console quelle équipe a le
+            plus de chance de gagner.
+          </li>
+        </ol>
+        <p>Données :</p>
+        <img src="./images/data1.png" alt="image1'data" />
+        <img src="./images/data2.png" alt="image2'data" />
+        <h2>🏁 Exercice 2</h2>
+        <p>Tâches :</p>
+        <ol>
+          <li>
+            Faire une boucle sur le tableau
+            <span class="inBlack">game.scored</span> et afficher dans la console
+            chaque nom de butteur ainsi que le numéro du but : (Exemple : “But 1
+            : Lewanoski”).
+          </li>
+          <li>
+            Faire une boucle qui calcule la moyenne des probabilités et l’écrire
+            dans la console.
+          </li>
+          <li>
+            Afficher les 2 probabilités dans la console, mais dans un joli
+            format comme ceci <br />
+            Probabilité de victoire pour Bayern Munich :1,33 <br />
+            Probabilité d’égalité : 3,25 <br />
+            Probabilité de victoire de Borussia Dortmund : 6,5 <br />
+            Bien récupérer les noms des équipes depuis l’objet ‘game’, ne pas
+            les “hardcoder”.
+          </li>
+          <li>
+            Créer un objet appelé ‘scorers’ qui contient le nom des joueurs qui
+            ont marqué en propriété et le nombre de buts qu’ils ont marqué en
+            value. Exemple :
+          </li>
+        </ol>
+        <img src="./images/scorers.png" alt="scorers'image" />
+        <h2>🏁 Exercice 3</h2>
+        <p>
+          Cette fois-ci, nous avons un tableau à 2 dimensions appelé
+          ‘gameEvents’ (voir en dessous) avec le log de tous les évènements qui
+          se sont passés pendant le match. La première case d’un sous-tableau
+          correspond à la minute de l’évènement, la 2ème case correspond au type
+          d’évènement.
+        </p>
+        <p>Tâches :</p>
+        <ol>
+          <li>
+            Créer un tableau ‘events’ des différents évènements qui se sont
+            déroulés (pas de doublon !).
+          </li>
+          <li>
+            Après que le jeux soit fini, on a décidé que le carton jaune de la
+            minute 64 n’était pas juste, Le supprimer du log d’évènements.
+          </li>
+          <li>
+            Calculer et afficher ce texte dans la console : “Un évènement est
+            apparu en moyenne toutes les 9 minutes”. (Un jeu de foot dure 90
+            minutes).
+          </li>
+          <li>
+            Faire une boucle sur ‘gameEvents’ et afficher pour chaque élément
+            dans la console s’il s’est déroulé dans la première ou deuxième
+            moitié du jeu :<br />
+            [PREMIÈRE MOITIÉ] 17 . ⚽️ GOAL
+          </li>
+        </ol>
+        <p>Données :</p>
+        <img
+          src="./images/dataEvent.png"
+          alt="events'image"
+          style="margin-bottom: 2rem"
+        />
+      </div>
+    </main>
+    <footer>
+      <div class="wrapper">
+        <p>&copy; gemini78 - 2021</p>
+      </div>
+      <script src="script.js"></script>
+    </footer>
+  </body>
+</html>
