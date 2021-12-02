@@ -1,12 +1,14 @@
 "use strict";
 
 // Calculate IMC of person
+
 const getImc = (user) => {
   let imc = user.poids / (user.taille * user.taille);
   return imc.toFixed(1);
 };
 
 // Get category'person
+
 const getCategory = (firstname, imc) => {
   let category = "";
   if (imc < 22) {
@@ -20,10 +22,11 @@ const getCategory = (firstname, imc) => {
   } else if (imc > 42) {
     category = "Obésité importante";
   }
-  console.log(`${firstname}: ${category}`);
+  return `${firstname}: ${category}`;
 };
 
 // Calcul and compare imc between people
+
 const calculAndCompareImc = (person1, person2) => {
   const imcPerson1 = getImc(person1);
   const imcPerson2 = getImc(person2);
@@ -38,8 +41,9 @@ const calculAndCompareImc = (person1, person2) => {
       `${person2.username} a un IMC (${imcPerson2}) plus élevé que ${person1.username} (${imcPerson1})`
     );
   }
-  getCategory(person1.username, imcPerson1);
-  getCategory(person2.username, imcPerson2);
+  console.log(getCategory(person1.username, imcPerson1));
+
+  console.log(getCategory(person2.username, imcPerson2));
 };
 
 // infos 1
